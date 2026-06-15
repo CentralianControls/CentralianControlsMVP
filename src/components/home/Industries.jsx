@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   Droplet,
@@ -54,14 +55,18 @@ export default function Industries() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className="group rounded-2xl border border-gray-200 bg-gray-50 p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/40 hover:bg-white hover:shadow-xl"
               >
-                <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 to-sky-400 text-white transition-transform group-hover:scale-110">
-                  <Icon size={32} />
-                </div>
-                <h3 className="font-semibold text-[#1a1d23]">
-                  {industry.name}
-                </h3>
+                <Link
+                  to="/solutions"
+                  className="group block h-full rounded-2xl border border-gray-200 bg-gray-50 p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/40 hover:bg-white hover:shadow-xl"
+                >
+                  <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 to-sky-400 text-white transition-transform group-hover:scale-110">
+                    <Icon size={32} />
+                  </div>
+                  <h3 className="font-semibold text-[#1a1d23]">
+                    {industry.name}
+                  </h3>
+                </Link>
               </motion.div>
             );
           })}

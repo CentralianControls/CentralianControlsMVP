@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, PlayCircle } from "lucide-react";
 import introImage from "../../assets/images/intro.png";
@@ -61,8 +62,8 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <a
-                href="/solutions"
+              <Link
+                to="/solutions"
                 className="group flex items-center justify-center gap-2 rounded-lg bg-cyan-500 px-8 py-4 font-semibold text-white shadow-lg shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-600"
               >
                 Explore Solutions
@@ -70,17 +71,16 @@ export default function Hero() {
                   size={20}
                   className="transition-transform group-hover:translate-x-1"
                 />
-              </a>
+              </Link>
 
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="flex items-center justify-center gap-2 rounded-lg border border-white/20 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/20"
               >
                 <PlayCircle size={20} />
                 Contact Our Team
-              </a>
+              </Link>
             </div>
-
           </motion.div>
 
           <motion.div

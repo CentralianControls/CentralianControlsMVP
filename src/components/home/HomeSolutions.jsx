@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Cpu, Radio, Wifi, Zap, Monitor, Package } from "lucide-react";
 
@@ -73,26 +74,27 @@ export default function HomeSolutions() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.06 }}
-                className="group rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-cyan-500/30 hover:shadow-2xl"
               >
-                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/10 to-sky-400/10 transition-transform group-hover:scale-110">
-                  <Icon className="text-cyan-500" size={28} />
-                </div>
-
-                <h3 className="mb-3 text-xl font-semibold text-[#1a1d23]">
-                  {solution.title}
-                </h3>
-
-                <p className="leading-relaxed text-gray-600">
-                  {solution.description}
-                </p>
-
-                <a
-                  href="/solutions"
-                  className="mt-6 inline-flex items-center gap-2 font-medium text-cyan-500 transition-all group-hover:gap-3"
+                <Link
+                  to="/solutions"
+                  className="group block h-full rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-cyan-500/30 hover:shadow-2xl"
                 >
-                  Learn More <span>→</span>
-                </a>
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/10 to-sky-400/10 transition-transform group-hover:scale-110">
+                    <Icon className="text-cyan-500" size={28} />
+                  </div>
+
+                  <h3 className="mb-3 text-xl font-semibold text-[#1a1d23]">
+                    {solution.title}
+                  </h3>
+
+                  <p className="leading-relaxed text-gray-600">
+                    {solution.description}
+                  </p>
+
+                  <span className="mt-6 inline-flex items-center gap-2 font-medium text-cyan-500 transition-all group-hover:gap-3">
+                    Learn More <span>→</span>
+                  </span>
+                </Link>
               </motion.div>
             );
           })}

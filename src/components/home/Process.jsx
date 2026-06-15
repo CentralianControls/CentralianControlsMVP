@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
-import { MessageSquare, PenTool, Hammer, FlaskConical, Truck } from "lucide-react";
+import {
+  MessageSquare,
+  PenTool,
+  Hammer,
+  FlaskConical,
+  Truck,
+} from "lucide-react";
 
 const steps = [
   {

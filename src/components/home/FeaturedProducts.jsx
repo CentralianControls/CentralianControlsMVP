@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Server, Gauge, Network, Shield, Camera, Sun } from "lucide-react";
 
@@ -73,17 +74,21 @@ export default function FeaturedProducts() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.06 }}
-                className="group rounded-2xl border border-gray-100 bg-gradient-to-br from-gray-50 to-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/40 hover:shadow-2xl"
               >
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 to-sky-400 text-white transition-transform group-hover:scale-110">
-                  <Icon size={32} />
-                </div>
-                <h3 className="mb-3 text-2xl font-semibold text-[#1a1d23]">
-                  {product.title}
-                </h3>
-                <p className="leading-relaxed text-gray-600">
-                  {product.description}
-                </p>
+                <Link
+                  to="/products"
+                  className="group block h-full rounded-2xl border border-gray-100 bg-gradient-to-br from-gray-50 to-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/40 hover:shadow-2xl"
+                >
+                  <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 to-sky-400 text-white transition-transform group-hover:scale-110">
+                    <Icon size={32} />
+                  </div>
+                  <h3 className="mb-3 text-2xl font-semibold text-[#1a1d23]">
+                    {product.title}
+                  </h3>
+                  <p className="leading-relaxed text-gray-600">
+                    {product.description}
+                  </p>
+                </Link>
               </motion.div>
             );
           })}
