@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
@@ -26,14 +27,15 @@ export default function CTA() {
         <h2 className="text-4xl font-bold lg:text-6xl">
           Ready to discuss your next industrial project?
         </h2>
+
         <p className="mx-auto mt-6 max-w-2xl text-xl leading-relaxed text-white/90">
           Send an enquiry and help the team understand your project, industry
           and hardware requirements.
         </p>
 
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="group inline-flex items-center justify-center gap-2 rounded-lg bg-white px-8 py-4 font-bold text-[#1a1d23] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
             Start an Enquiry
@@ -41,14 +43,14 @@ export default function CTA() {
               size={20}
               className="transition-transform group-hover:translate-x-1"
             />
-          </a>
+          </Link>
 
-          <a
-            href="/solutions"
+          <Link
+            to="/solutions"
             className="inline-flex items-center justify-center rounded-lg border border-white/40 bg-white/10 px-8 py-4 font-bold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/20"
           >
             View Solutions
-          </a>
+          </Link>
         </div>
       </motion.div>
     </section>
